@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>com.ptrampert.LibVLCBind</id>
+    <version>2.0.2</version>
+    <title>LibVLCBind</title>
+    <authors>Paul Trampert</authors>
+    <owners/>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/lgpl-2.0-standalone.html</licenseUrl>
+    <projectUrl>http://libvlcbind.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This package provides managed hooks into libvlc.dll. Included with this package are libvlc.dll, libvlccore.dll, and the plugins directory for convenience.</description>
+    <references>
+      <reference file="com.ptrampert.LibVLCBind.dll" />
+    </references>
+  </metadata>
+  <files>
+    <file src="bin\Release\libvlc.dll" target="content\libvlc.dll" />
+    <file src="bin\Release\libvlccore.dll" target="content\libvlccore.dll" />
+    <file src="bin\Release\plugins\**" target="content\plugins" />
+    <file src="bin\Release\plugins\plugins.dat" target="content\plugins\plugins.dat" />
+    <file src="bin\Release\com.ptrampert.LibVLCBind.dll" target="lib\net45\com.ptrampert.LibVLCBind.dll" />
+    <file src="bin\Release\com.ptrampert.LibVLCBind.XML" target="lib\net45\com.ptrampert.LibVLCBind.XML" />
+    <file src="tools\install.ps1" target="tools\install.ps1" />
+  </files>
+</package>
