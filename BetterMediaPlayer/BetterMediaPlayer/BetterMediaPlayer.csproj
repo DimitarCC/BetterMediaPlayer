@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SharpDX">
+      <HintPath>..\3rd party\SharpDX.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -45,6 +48,12 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Taygeta.Controls">
+      <HintPath>..\3rd party\Taygeta.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Taygeta.Core">
+      <HintPath>..\3rd party\Taygeta.Core.dll</HintPath>
     </Reference>
     <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
@@ -94,6 +103,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="VideoCanvas.resx">
+      <DependentUpon>VideoCanvas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,9 +116,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\com.ptrampert.LibVLCBind\com.ptrampert.LibVLCBind.csproj">
-      <Project>{275caff0-4c2d-4174-85be-f5f677476a8f}</Project>
-      <Name>com.ptrampert.LibVLCBind</Name>
+    <ProjectReference Include="..\Declarations\nVLC.Declarations.csproj">
+      <Project>{819c4bab-8fd0-463f-bb5f-119731840390}</Project>
+      <Name>nVLC.Declarations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Implementation\nVLC.Implementation.csproj">
+      <Project>{6ba02cca-2e14-4a64-8ab6-594e600d80c9}</Project>
+      <Name>nVLC.Implementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibVlcWrapper\nVLC.LibVlcWrapper.csproj">
+      <Project>{57f08087-b175-4c96-be36-83fbc4a21065}</Project>
+      <Name>nVLC.LibVlcWrapper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
