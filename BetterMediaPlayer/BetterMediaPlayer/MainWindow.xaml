@@ -11,6 +11,10 @@
 		<WindowsFormsHost>
 			<local:VideoCanvas x:Name="VideoCanvas"/>
 		</WindowsFormsHost>
-		<Button Content="Button" HorizontalAlignment="Left" Margin="163,39,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+		<Button Content="Browse" HorizontalAlignment="Left" Margin="337,43,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+		<Button Content="Play" HorizontalAlignment="Left" Margin="22,43,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+		<Button Content="Pause" HorizontalAlignment="Left" Margin="116,43,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+		<Button Content="Stop" HorizontalAlignment="Left" Margin="211,43,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
+		<Slider x:Name="ProgressBar"  Margin="10,5,10,0" Grid.Row="1" VerticalAlignment="Top" ValueChanged="ProgressBar_ValueChanged" Maximum="1" LargeChange="0.1" SmallChange="0.01" TickFrequency="0.1"/>
 	</Grid>
 </Window>
